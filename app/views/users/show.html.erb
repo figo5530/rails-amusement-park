@@ -1,0 +1,17 @@
+<% if flash[:message] %>
+    <%= flash[:message] %>
+<% end %>
+<% if @user.admin %>
+<strong>ADMIN</strong><br>
+<strong>name: <%= @user.name %></strong><br>
+
+<% else %>
+<strong>name: <%= @user.name %></strong><br>
+<strong>Mood: <%= @user.mood %></strong><br>
+<strong>happiness: <%= @user.happiness %></strong><br>
+<strong>nausea: <%= @user.nausea %></strong><br>
+<strong>height: <%= @user.height %></strong><br>
+<strong>Tickets: <%= @user.tickets %></strong><br>
+<% end %>
+
+<%= link_to 'See attractions', attractions_path%>
